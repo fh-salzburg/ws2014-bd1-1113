@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # get 'questions' => 'questions#index'
   # get 'questions/:id' => 'questions#show'
 
-  resources :questions, only: [ :index, :show ]
+  resources :questions, only: [ :index, :show, :update ]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

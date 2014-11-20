@@ -1,5 +1,12 @@
 <h1><%= @question.title %></h1>
 
+<%= form_for @question do |f| %>
+  <%= f.label :title, "mein Titel" %>
+  <%= f.text_field :title %><br />
+  <%= f.text_area :body %><br />
+  <%= f.submit %>
+<% end %>
+
 <%= @question.body %>
 
 <div>
@@ -8,7 +15,14 @@ Antworten:
 
 <ul>
 <% @question.answers.each do |answer| %>
-  <li><%= answer.body %></li>
+  <%= render partial: 'answer', locals: { answer: answer } %>
+  <%= render 'answer', answer: answer %>
 <% end %>
+
+<%= render partial: 'answer', collection: @question.answers %>
+<%= render partial: 'answers/answer', collection: @question.answers %>
+<%= render @question.answers %>
+
+<%# comment %>
 </ul>
 

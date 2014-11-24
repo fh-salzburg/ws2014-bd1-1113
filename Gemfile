@@ -38,3 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'pry-rails'
+gem "twitter-bootstrap-rails"
+gem 'quiet_assets', group: :development

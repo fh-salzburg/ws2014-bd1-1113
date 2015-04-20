@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 gem 'pry-rails'
 gem "twitter-bootstrap-rails"
 gem 'quiet_assets', group: :development
+
+gem 'prawn'
+gem 'delayed_job_active_record'
+gem 'refile', require: ["refile/rails"]
